@@ -1,0 +1,52 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9fafc;
+    margin: 0;
+    color: #333;
+  }
+  
+  .privacy {
+    background-color: #ffffff;
+    padding: 20px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .privacy h1 {
+    color: #007bff;
+    margin-bottom: 20px;
+  }
+  
+  .privacy h2 {
+    color: #0056b3;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .privacy p {
+    line-height: 1.8;
+    margin-bottom: 15px;
+  }
+  
+  .privacy ul {
+    padding-left: 20px;
+  }
+  
+  .privacy ul li {
+    margin-bottom: 10px;
+  }
+  
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Footer */
+  footer {
+    font-size: 1rem;
+  }
+  

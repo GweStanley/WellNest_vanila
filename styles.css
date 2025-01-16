@@ -1,0 +1,101 @@
+/* Global Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9fafc;
+  margin: 0;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.nav-link{
+text-align: right;
+}
+
+/* Buttons */
+button {
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* Carousel */
+.carousel img {
+  height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.carousel-caption h5 {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  border-radius: 4px;
+}
+
+/* Card */
+.card {
+  max-width: 600px;
+  margin: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  border: none;
+}
+
+/* Records Section */
+#records {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#records-list {
+  margin-top: 20px;
+}
+
+.record-item {
+  margin-bottom: 20px;
+}
+
+.record-item h5 {
+  font-size: 1.2rem;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.record-item p {
+  margin: 0;
+}
+
+/* Footer */
+footer {
+  font-size: 1rem;
+  background-color: #007bff;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px;
+}
+h5{
+  padding: 5%;
+  color:white;
+  background-color: lightblue;
+  border-radius: 1%;
+}
+.logoimg{
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+}
+#cal{
+  color:white;
+  padding-top: 5%;
+  text-align: center;
+}

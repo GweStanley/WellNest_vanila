@@ -1,0 +1,29 @@
+.about {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about h1 {
+    color: #007bff;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .about ul {
+    margin-top: 10px;
+    padding-left: 20px;
+  }
+  
+  .about ul li {
+    margin-bottom: 10px;
+  }
+  h5{
+    color: #007bff;
+text-decoration: solid;
+font-family: Arial, Helvetica, sans-serif;
+font-style: italic;
+padding: 2%;
+  }
+  

@@ -1,0 +1,90 @@
+.help {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .help h1 {
+    color: #007bff;
+    margin-bottom: 20px;
+  }
+  
+  .faq {
+    margin-top: 20px;
+  }
+  
+  .faq-item {
+    margin-bottom: 20px;
+  }
+  
+  .faq-item h5 {
+    cursor: pointer;
+    color: #007bff;
+    transition: color 0.3s;
+  }
+  
+  .faq-item h5:hover {
+    color: #0056b3;
+  }
+  
+  .faq-answer {
+    margin-top: 10px;
+    padding-left: 20px;
+    color: #333;
+  }
+  .exLink{
+    text-align: center;
+  }
+  #health-resources {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  #health-resources h2 {
+    color: #007bff;
+    margin-bottom: 20px;
+  }
+  
+  .resource-card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .resource-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .resource-card img {
+    height: 150px; /* Reduced image size */
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  
+  .resource-card .card-title {
+    font-size: 1.1rem;
+    color: #007bff;
+  }
+  
+  .resource-card .card-text {
+    font-size: 0.9rem;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
+  h1{
+    text-align: center;
+  }

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Help - WellNest</title>
+  <link rel="stylesheet" href="help.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+  <section class="help container mt-4">
+    <h1>Help and FAQ</h1>
+    <p>If you have questions about WellNest, you've come to the right place. Below are some frequently asked questions:</p>
+
+    <div class="faq">
+      <div class="faq-item">
+        <h5 onclick="toggleAnswer(this)">What is the purpose of WellNest?</h5>
+        <p class="faq-answer d-none">WellNest helps you store and organize vital medical information, such as blood type, genotype, allergies, and emergency contact details, for quick access during emergencies.</p>
+      </div>
+
+      <div class="faq-item">
+        <h5 onclick="toggleAnswer(this)">What is BMI?</h5>
+        <p class="faq-answer d-none">The full meaning of BMI is Body Mass Index. 
+          It is a measure used to classify underweight, normal weight, overweight, 
+          and obesity based on a person's weight relative to their height. 
+          It is calculated using the formula: weight(kg)/height(m)2. <a href="./cal.html">See Health Calculator</a> </p>
+      </div>
+
+
+      <div class="faq-item">
+        <h5 onclick="toggleAnswer(this)">What are the different blood types?</h5>
+        <p class="faq-answer d-none">The main blood types are A+, A-, B+, B-, AB+, AB-, O+, and O-. They are categorized based on the presence or absence of specific antigens.</p>
+      </div>
+      <div class="faq-item">
+        <h5 onclick="toggleAnswer(this)">What do the genotypes AA, AS, and SS mean?</h5>
+        <p class="faq-answer d-none">Genotype refers to the genetic makeup of an individual. AA is normal, AS is a carrier of the sickle cell trait, and SS indicates sickle cell disease.</p>
+      </div>
+      <div class="faq-item">
+        <h5 onclick="toggleAnswer(this)">What is blood compatibility?</h5>
+        <p class="faq-answer d-none">
+          Blood compatibility determines who can donate or receive blood. Here’s a quick guide:
+          <ul>
+            <li>O- is a universal donor and can donate to all blood types.</li>
+            <li>O+ can donate to all positive blood types (A+, B+, AB+, O+).</li>
+            <li>AB+ is a universal recipient and can receive from all blood types.</li>
+            <li>A and B types can donate or receive based on their specific Rh factors (+ or -).</li>
+          </ul>
+        </p>
+        <a class="exLink" href="https://www.nhsbt.nhs.uk/what-we-do/clinical-and-research/blood-group-genotyping/">see more on blood groups NHS</a>
+      </div>
+      <div class="faq-item">
+        <h5 onclick="toggleAnswer(this)">What is genotype compatibility?</h5>
+        <p class="faq-answer d-none">
+          Genotype compatibility is crucial for avoiding genetic disorders like sickle cell disease in offspring. Here’s a guide:
+          <ul>
+            <li><strong>AA + AA:</strong> Compatible (no risk).</li>
+            <li><strong>AA + AS:</strong> Compatible (carrier risk).</li>
+            <li><strong>AA + SS:</strong> Compatible (offspring carrier of S).</li>
+            <li><strong>AS + AS:</strong> Risk of sickle cell disease (25% SS).</li>
+            <li><strong>AS + SS:</strong> High risk of sickle cell disease (50% SS).</li>
+            <li><strong>SS + SS:</strong> 100% risk of sickle cell disease.</li>
+          </ul>
+        </p>
+        <a class="exLink" href="https://www.nhsbt.nhs.uk/what-we-do/clinical-and-research/blood-group-genotyping/">see more on Genotypes NHS</a>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="health-resources" class="container mt-4">
+    <h2 class="text-center">Trusted Health Information Resources</h2>
+    <p class="text-center">Here are some renowned websites offering reliable and comprehensive medical information:</p>
+    <div class="row mt-4">
+      <div class="col-sm-6 col-lg-4 mb-3">
+        <div class="card resource-card">
+          <img src="https://tse2.mm.bing.net/th?id=OIP.k6MO3VGVyaU5cqrlHMOKbgAAAA&pid=Api" class="card-img-top" alt="MedlinePlus">
+          <div class="card-body">
+            <h5 class="card-title">MedlinePlus</h5>
+            <p class="card-text">Consumer health information from the U.S. National Library of Medicine.</p>
+            <a href="https://www.medlineplus.gov" target="_blank" class="btn btn-primary">Visit Site</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 mb-3">
+        <div class="card resource-card">
+          <img src="https://tse1.mm.bing.net/th?id=OIP.xYXtvOUb0Iw1ceOvReCZiAHaEo&pid=Api" class="card-img-top" alt="WebMD">
+          <div class="card-body">
+            <h5 class="card-title">WebMD</h5>
+            <p class="card-text">Credible health information, news, and supportive communities.</p>
+            <a href="https://www.webmd.com" target="_blank" class="btn btn-primary">Visit Site</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 mb-3">
+        <div class="card resource-card">
+          <img src="https://tse1.mm.bing.net/th?id=OIP.b-k3WFfL5ZdjXnv1kLny2gHaFj&pid=Api" class="card-img-top" alt="Healthline">
+          <div class="card-body">
+            <h5 class="card-title">Healthline</h5>
+            <p class="card-text">Trusted health advice and medically reviewed content.</p>
+            <a href="https://www.healthline.com" target="_blank" class="btn btn-primary">Visit Site</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 mb-3">
+        <div class="card resource-card">
+          <img src="https://tse1.mm.bing.net/th?id=OIP.1czDtfL44ZeTiHRGDL-JKQHaEH&pid=Api" class="card-img-top" alt="Verywell Health">
+          <div class="card-body">
+            <h5 class="card-title">Verywell Health</h5>
+            <p class="card-text">Clear, jargon-free content for informed health decisions.</p>
+            <a href="https://www.verywellhealth.com" target="_blank" class="btn btn-primary">Visit Site</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 mb-3">
+        <div class="card resource-card">
+          <img src="https://tse1.mm.bing.net/th?id=OIP.RKc_bBhgXDf-yj2bN9CEnwHaHa&pid=Api" class="card-img-top" alt="Patient.info">
+          <div class="card-body">
+            <h5 class="card-title">Patient.info</h5>
+            <p class="card-text">Evidence-based medical information on symptoms and treatments.</p>
+            <a href="https://patient.info" target="_blank" class="btn btn-primary">Visit Site</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <footer class="bg-primary text-white text-center py-3 mt-4">
+    <p>&copy; <span id="year"></span> WellNest. All rights reserved.Pathfinder Labs</p>
+  </footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    function toggleAnswer(element) {
+      const answer = element.nextElementSibling;
+      answer.classList.toggle("d-none");
+    }
+  </script>
+</body>
+</html>

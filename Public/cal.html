@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI and Cholesterol Calculator</title>
+    <link rel="stylesheet" href="cal.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>BMI and Cholesterol Calculator</h1>
+    <button onclick="showBMI()">BMI Calculator</button>
+    <button onclick="showCholesterol()">Cholesterol Calculator</button>
+
+    <div id="bmi-calculator" class="hidden">
+        <h2>BMI Calculator</h2>
+        <label for="weight">Weight (kg): </label>
+        <input type="number" id="weight" step="0.1">
+        <br>
+        <br>
+        <label for="height">Height (cm): </label>
+        <input type="number" id="height" step="0.1">
+        <br>
+        <button onclick="calculateBMI()">Calculate BMI</button>
+        <div class="result" id="bmi-result"></div>
+    </div>
+
+    <div id="cholesterol-calculator" class="hidden">
+        <h2>Cholesterol Calculator</h2>
+        <label for="cholesterol">Cholesterol Level (mg/dL): </label>
+        <input type="number" id="cholesterol">
+        <br>
+        <button onclick="calculateCholesterol()">Check Cholesterol</button>
+        <div class="result" id="cholesterol-result"></div>
+    </div>
+</div>
+
+
+
+<footer class="bg-primary text-white text-center py-3 mt-4">
+    <p>&copy; <span id="year"></span> WellNest. All rights reserved. Pathfinder Labs</p>
+  </footer>
+
+
+<script>
+            document.getElementById("year").textContent = new Date().getFullYear();
+
+    function showBMI() {
+        document.getElementById('bmi-calculator').classList.remove('hidden');
+        document.getElementById('cholesterol-calculator').classList.add('hidden');
+    }
+
+    function showCholesterol() {
+        document.getElementById('cholesterol-calculator').classList.remove('hidden');
+        document.getElementById('bmi-calculator').classList.add('hidden');
+    }
+
+    function calculateBMI() {
+        const weight = parseFloat(document.getElementById('weight').value);
+        const heightCm = parseFloat(document.getElementById('height').value);
+
+        if (!weight || !heightCm || heightCm <= 0) {
+            document.getElementById('bmi-result').innerText = "Please enter valid weight and height.";
+            return;
+        }
+
+        const heightM = heightCm / 100;
+        const bmi = (weight / (heightM * heightM)).toFixed(2);
+        let advice;
+        let idealWeightMin = (18.5 * (heightM * heightM)).toFixed(1);
+        let idealWeightMax = (24.9 * (heightM * heightM)).toFixed(1);
+        let weightDifference;
+
+        if (bmi < 18.5) {
+            weightDifference = (idealWeightMin - weight).toFixed(1);
+            advice = `<span class='red'>You are underweight. Your ideal weight range is ${idealWeightMin}kg to ${idealWeightMax}kg. You need to gain approximately ${weightDifference}kg.</span>`;
+        } else if (bmi >= 18.5 && bmi < 24.9) {
+            advice = `<span class='green'>You have a normal weight. Your ideal weight range is ${idealWeightMin}kg to ${idealWeightMax}kg. Great job maintaining your weight!</span>`;
+        } else if (bmi >= 25 && bmi < 29.9) {
+            weightDifference = (weight - idealWeightMax).toFixed(1);
+            advice = `<span class='red'>You are overweight. Your ideal weight range is ${idealWeightMin}kg to ${idealWeightMax}kg. You need to lose approximately ${weightDifference}kg.</span>`;
+        } else {
+            weightDifference = (weight - idealWeightMax).toFixed(1);
+            advice = `<span class='red'>You are obese. Your ideal weight range is ${idealWeightMin}kg to ${idealWeightMax}kg. You need to lose approximately ${weightDifference}kg. Consult a healthcare provider for personalized advice.</span>`;
+        }
+
+        document.getElementById('bmi-result').innerHTML = `Your BMI is ${bmi}. ${advice}`;
+    }
+
+    function calculateCholesterol() {
+        const cholesterol = parseInt(document.getElementById('cholesterol').value);
+
+        if (!cholesterol || cholesterol <= 0) {
+            document.getElementById('cholesterol-result').innerText = "Please enter a valid cholesterol level.";
+            return;
+        }
+
+        let advice;
+
+        if (cholesterol < 200) {
+            advice = "Your cholesterol level is desirable. Maintain a healthy lifestyle.";
+        } else if (cholesterol >= 200 && cholesterol <= 239) {
+            advice = "Your cholesterol level is borderline high. Consider dietary changes and regular exercise.";
+        } else {
+            advice = "Your cholesterol level is high. Consult a healthcare provider for further evaluation.";
+        }
+
+        document.getElementById('cholesterol-result').innerText = `${advice}`;
+
+    }
+</script>
+
+</body>
+</html>
